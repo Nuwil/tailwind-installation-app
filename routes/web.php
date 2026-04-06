@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NoteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,3 +14,5 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::resource('notes', NoteController::class)->except(['show']);
