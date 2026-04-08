@@ -11,5 +11,8 @@
         <h1 class="text-3xl font-bold text-center text-green-600">Contact Us</h1>
         <p class="mt-4 text-gray-700 text-center">Feel free to reach out to us for any inquiries or support.</p>
     </div>
+    <div class="mt-8">
+            <a href="{{ route('home') }}" class="text-sm text-blue-600 hover:underline">Back to home</a>
+    </div>
 </body>
 </html>

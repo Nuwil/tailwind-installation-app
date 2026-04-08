@@ -10,7 +10,7 @@
     <div class="max-w-4xl mx-auto px-4 py-8">
         <div class="flex items-center justify-between mb-6">
             <h1 class="text-3xl font-bold text-gray-900">Notes</h1>
-            <a href="{{ route('notes.create') }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">New Note</a>
+            <a href="{{ route('notes.create') }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blueg-700">New Note</a>
         </div>
 
         @if(session('success'))

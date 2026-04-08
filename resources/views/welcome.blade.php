@@ -11,6 +11,8 @@
         <h1 class="text-4xl font-bold text-blue-600">Hello, Laravel + Tailwind!</h1>
         <p class="mt-4 text-gray-600">Routes and Tailwind CSS are working.</p>
         <a href="{{ route('notes.index') }}" class="mt-6 inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700">Go to Notes CRUD</a>
+        <a href="{{ route('about') }}" class="mt-6 inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700" >About Us</a>
+        <a href="{{ route('contact') }}" class="mt-6 inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700" >Contact Us</a>
     </div>
 </body>
 </html>
