@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-100 min-h-screen">
     <div class="max-w-2xl mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-gray-900 mb-6">Edit Note</h1>
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Edit Note</h1>
 
         <form action="{{ route('notes.update', $note) }}" method="POST" class="space-y-6 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
             @csrf
@@ -24,7 +24,7 @@
 
             <div>
                 <label class="block text-sm font-medium text-gray-700">Content</label>
-                <textarea name="content" rows="6" class="mt-2 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">{{ old('content', $note->content) }}</textarea>
+                <textarea name="content" class="mt-2 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 h-32 md:h-64 overflow-y-auto resize-none">{{ old('content', $note->content) }}</textarea>
                 @error('content')
                     <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                 @enderror

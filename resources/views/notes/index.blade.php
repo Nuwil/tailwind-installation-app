@@ -9,7 +9,7 @@
 <body class="bg-gray-100 min-h-screen">
     <div class="max-w-4xl mx-auto px-4 py-8">
         <div class="flex items-center justify-between mb-6">
-            <h1 class="text-3xl font-bold text-gray-900">Notes</h1>
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Notes</h1>
             <a href="{{ route('notes.create') }}" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">New Note</a>
         </div>
 
@@ -29,7 +29,7 @@
                     <div class="rounded-lg bg-white border border-gray-200 p-6 shadow-sm">
                         <div class="flex items-start justify-between gap-4">
                             <div>
-                                <h2 class="text-xl font-semibold text-gray-900">{{ $note->title }}</h2>
+                                <h2 class="text-lg md:text-xl font-semibold text-gray-900">{{ $note->title }}</h2>
                                 <p class="mt-2 text-gray-700">{{ Illuminate\Support\Str::limit($note->content, 180) }}</p>
                             </div>
                             <div class="flex items-center gap-2">
