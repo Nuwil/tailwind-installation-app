@@ -1,35 +1,30 @@
 <x-app-layout :title="'Create Note - Tailwind Notes'">
-    <div class="mx-auto max-w-3xl space-y-6 rounded-3xl bg-white px-6 py-8 shadow-sm sm:px-10 sm:py-10">
-        <div class="space-y-2">
-            <p class="text-sm uppercase tracking-[0.3em] text-slate-500">Notes</p>
-            <h1 class="text-3xl font-semibold text-slate-900">Create a new note</h1>
-            <p class="text-slate-600">Add a quick note and keep your ideas organized in a clean space.</p>
+    <div class="mx-auto max-w-3xl space-y-8 rounded-[2rem] border border-white/10 bg-slate-900/90 p-8 shadow-2xl shadow-slate-950/20 sm:p-10">
+        <div class="space-y-3">
+            <p class="text-sm uppercase tracking-[0.3em] text-sky-300">Create note</p>
+            <h1 class="text-3xl font-semibold text-white">Capture your next idea.</h1>
+            <p class="text-slate-400">A crisp form with plenty of breathing room so writing notes feels effortless.</p>
         </div>
 
         <form action="{{ route('notes.store') }}" method="POST" class="space-y-6">
             @csrf
-
-            <div>
-                <label class="block text-sm font-medium text-slate-700">Title</label>
-                <input type="text" name="title" value="{{ old('title') }}" class="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 shadow-sm focus:border-sky-400 focus:outline-none focus:ring-4 focus:ring-sky-100" required>
+            <div class="space-y-2">
+                <label class="block text-sm font-semibold text-slate-200">Title</label>
+                <input type="text" name="title" value="{{ old('title') }}" class="w-full rounded-3xl border border-white/10 bg-slate-950 px-4 py-3 text-white shadow-sm outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-400/10" required>
                 @error('title')
-                    <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    <p class="text-sm text-rose-400">{{ $message }}</p>
                 @enderror
             </div>
-
-            <div>
-                <label class="block text-sm font-medium text-slate-700">Content</label>
-                <textarea name="content" class="mt-2 h-40 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 shadow-sm focus:border-sky-400 focus:outline-none focus:ring-4 focus:ring-sky-100" required>{{ old('content') }}</textarea>
+            <div class="space-y-2">
+                <label class="block text-sm font-semibold text-slate-200">Content</label>
+                <textarea name="content" rows="8" class="w-full rounded-3xl border border-white/10 bg-slate-950 px-4 py-3 text-white shadow-sm outline-none transition focus:border-sky-400 focus:ring-4 focus:ring-sky-400/10" required>{{ old('content') }}</textarea>
                 @error('content')
-                    <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    <p class="text-sm text-rose-400">{{ $message }}</p>
                 @enderror
             </div>
-
             <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <div class="flex items-center gap-3">
-                    <button type="submit" class="inline-flex rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">Save Note</button>
-                    <a href="{{ route('notes.index') }}" class="text-sm text-slate-600 hover:text-slate-900">Cancel</a>
-                </div>
+                <a href="{{ route('notes.index') }}" class="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:bg-white/10">Cancel</a>
+                <button type="submit" class="inline-flex items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-400">Save note</button>
             </div>
         </form>
     </div>
